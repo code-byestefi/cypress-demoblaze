@@ -1,4 +1,6 @@
+import { CartMethods } from "./pages/cart/cart.methods";
 import { HomeMethods } from "./pages/home/home.methods";
+import { ProductDetailMethods } from "./pages/productDetail/productDetail.methods";
 
 describe('template spec', () => {
   it('passes', () => {
@@ -8,8 +10,6 @@ describe('template spec', () => {
     cy.visit('https://www.demoblaze.com/')
     //cy.get('a[data-target="#logInModal"]').click()
 
-    HomeMethods.clickOnProductLink('Samsung galaxy s7');
-    cy.wait(5000)
 
   })
 })
