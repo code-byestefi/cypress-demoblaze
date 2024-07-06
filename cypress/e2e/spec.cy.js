@@ -1,16 +1,15 @@
-import { LoginMethods } from "./pages/login/login.methods"
+import { HomeMethods } from "./pages/home/home.methods";
 
 describe('template spec', () => {
   it('passes', () => {
-    const username = 'username';
-    const password = 'password';
+    //const username = 'username';
+    //const password = 'password';
 
     cy.visit('https://www.demoblaze.com/')
-    cy.get('a[data-target="#logInModal"]').click()
+    //cy.get('a[data-target="#logInModal"]').click()
 
-    LoginMethods.login(username, password)
-
-    cy.get('a#nameofuser').should('contain.text', username)
+    HomeMethods.clickOnProductLink('Samsung galaxy s7');
     cy.wait(5000)
+
   })
 })
