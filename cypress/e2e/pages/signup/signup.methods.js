@@ -1,3 +1,4 @@
+import { CommonMethods } from "../common/common.methods";
 import { SignUpElements } from "./signup.elements";
 
 export class SignUpMethods {
@@ -18,6 +19,10 @@ export class SignUpMethods {
         this.insertUsername(username);
         this.insertPassword(password);
         this.clickOnSignUpButton();
+    }
+
+    static verifySignupSuccessfulMessageIsDisplayed() {
+        CommonMethods.verifyAlert("Sign up successful.");
     }
 
 }

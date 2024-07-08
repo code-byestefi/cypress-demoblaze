@@ -5,6 +5,7 @@ import { CommonElements } from "./common.elements";
 export class CommonMethods{
 
     static navigateToDemoBlaze() {
+        cy.clearCookies();
         cy.visit(CommonData.url);
     }
 
@@ -30,6 +31,12 @@ export class CommonMethods{
 
     static clickOnSignUpOption() {
         CommonElements.topMenu.signUp.click()
+    }
+
+    static verifyAlert(expectedMessage) {
+        cy.on("window:alert", (str) => {
+            expect(str).to.equal(expectedMessage);
+        });
     }
 
 }

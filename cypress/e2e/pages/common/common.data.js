@@ -4,4 +4,12 @@ export class CommonData{
         return 'https://www.demoblaze.com/';
     }
 
+    static get testSuites() {
+        return {
+            registroYAutenticacion: "Registro y Autenticacion",
+            catalogoYCompra: "Catálogo y Compras", 
+            
+        }
+    }
+
 }
