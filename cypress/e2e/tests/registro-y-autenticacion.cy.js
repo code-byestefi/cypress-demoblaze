@@ -4,6 +4,9 @@ import { CommonMethods } from '../pages/common/common.methods';
 import { Logger } from "../util/logger"
 import { SignUpMethods } from "../pages/signup/signup.methods"
 
+const user = CommonMethods.generateRandomString();
+const password = CommonMethods.generateRandomString();
+
 describe(CommonData.testSuites.registroYAutenticacion, () => {
 
     it('Registro de usuario válido', ()=> {
@@ -17,8 +20,8 @@ describe(CommonData.testSuites.registroYAutenticacion, () => {
 
         Logger.stepNumber(3)
         Logger.step('Completar los campos obligatorios con información válida')
-        SignUpMethods.insertUsername('eititest');
-        SignUpMethods.insertPassword('testpass');
+        SignUpMethods.insertUsername(user);
+        SignUpMethods.insertPassword(password);
 
         Logger.stepNumber(4)
         Logger.step('Hacer click en "Sign up" para registrar el usuario')
