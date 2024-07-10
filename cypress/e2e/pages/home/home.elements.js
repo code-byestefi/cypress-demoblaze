@@ -16,7 +16,7 @@ export class HomeElements {
 
     static products(productName) {
         // dinamic selectors
-        return cy.contains('a', productName)
+        return cy.contains('a', productName,{timeout: 15000})
     }
 }
 
