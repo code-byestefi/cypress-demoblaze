@@ -5,11 +5,11 @@
   "main": "index.js",
   "scripts": {
     "clean-report": "rimraf ./allure-report && rimraf allure-results",
-    "running-test": "cypress run --headed --env allure=true",
+    "running-test": "cypress run --env allure=true",
     "generate-report": "allure generate allure-results -o allure-report --clean",
     "open-report": "allure open",
     "test": "npm run clean-report && npm run running-test & npm run generate-report && npm run open-report",
-    "cy:parallel" : "npm run clean-report && cypress-parallel -s running-test -t 2 -d ./cypress/e2e/tests; generate-report"
+    "cy:parallel": "npm run clean-report && cypress-parallel -s running-test -t 2 -d './cypress/e2e/tests' && npm run generate-report"
   },
   "keywords": [],
   "author": "",
