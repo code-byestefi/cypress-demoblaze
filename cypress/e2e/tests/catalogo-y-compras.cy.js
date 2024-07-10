@@ -81,7 +81,6 @@ describe(CommonData.testSuites.catalogoYCompra, () => {
 
         Logger.postCondition('Limpiar el carrito')
         CartMethods.clearCart(user.username, user.password);
-        cy.wait(50000)
         CommonMethods.logout();
     })
 
@@ -147,10 +146,8 @@ describe(CommonData.testSuites.catalogoYCompra, () => {
         Logger.stepNumber(13)
         Logger.step('Verificar que se muestre el mensaje de confirmacion y se redirige al usuario a la pagina de inicio')
         ThankYouForYouPurchaseMethods.verifyGreenCheckMark();
-        cy.wait(3000);
         ThankYouForYouPurchaseMethods.clickOnOkButton();
         HomeMethods.verifyHomePageShown();
-
     })
 
 })
