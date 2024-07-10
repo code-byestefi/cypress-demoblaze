@@ -1,10 +1,7 @@
-version: 0.2
-phases:
-  install:
-    runtime-versions:
-      nodejs: latest
-    commands:
-      - npm install
-  build:
-    commands:
-      - npm run cy:parallel
+steps:
+  - name: 'gcr.io/cloud-builders/npm'
+    args: ['install']
+  - name: 'gcr.io/cloud-builders/npm'
+    args: ['run', 'cy:parallel']
+  - name: 'gcr.io/cloud-builders/npm'
+    args: ['run', 'generate-report']
