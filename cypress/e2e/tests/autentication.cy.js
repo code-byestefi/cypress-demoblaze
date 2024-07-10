@@ -29,6 +29,9 @@ describe(CommonData.testSuites.autenticacion, () => {
         Logger.verification('Verificar que se redirige al usuario a la página de inicio')
         CommonMethods.verifySignedUser(LoginData.validCredentials.username)
 
+        Logger.postCondition('Hacer log out')
+        CommonMethods.logout();
+
         cy.wait(1000);
     });
 

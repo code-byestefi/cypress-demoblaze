@@ -4,7 +4,8 @@ import { CommonElements } from "./common.elements";
 export class CommonMethods{
 
     static navigateToDemoBlaze() {
-        cy.clearCookies();
+        cy.clearAllCookies();
+        cy.clearLocalStorage();
         cy.visit(CommonData.url);
     }
 
@@ -55,6 +56,14 @@ export class CommonMethods{
 
     static verifySignedUser(username) {
         CommonElements.signedUser.should('have.text', `Welcome ${username}`)
+    }
+
+    static logout() {
+        cy.get('body').then($body => {
+            if($body.find('#logout2').length > 0 ){
+                CommonElements.topMenu.logOut.click();
+            }
+        })
     }
 
 }

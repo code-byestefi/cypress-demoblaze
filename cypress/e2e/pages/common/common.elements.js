@@ -19,8 +19,10 @@ export class CommonElements {
             },
             get signUp() {
                 return cy.contains('a', 'Sign up')
+            },
+            get logOut() {
+                return cy.get('#logout2')
             }
-
         }
     }
 
