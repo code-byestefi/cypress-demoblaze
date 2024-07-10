@@ -1,4 +1,4 @@
-# Proyecto Final - Resultado
+# DemoBlaze - Cypress
 
 Este proyecto tiene como objetivo diseñar un framework de testing para ejecutar pruebas automatizadas utilizando Cypress, implementando buenas prácticas de logging para asegurar que las pruebas automatizadas reflejen fielmente el comportamiento de los casos de prueba manuales.
 
