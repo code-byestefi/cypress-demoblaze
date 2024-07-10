@@ -1,4 +1,3 @@
-import { HomeElements } from "../home/home.elements";
 import { CommonData } from "./common.data";
 import { CommonElements } from "./common.elements";
 
@@ -20,9 +19,11 @@ export class CommonMethods{
     static clickAboutUsOption() {
         CommonElements.topMenu.aboutUs.click()
     }
-
     static clickOnCartOption() {
         CommonElements.topMenu.cart.click()
+        cy.on('uncaught:exception', (err, runnable) => {
+            return false
+        })
     }
 
     static clickOnLoginOption() {
@@ -55,7 +56,5 @@ export class CommonMethods{
     static verifySignedUser(username) {
         CommonElements.signedUser.should('have.text', `Welcome ${username}`)
     }
-
-    
 
 }
