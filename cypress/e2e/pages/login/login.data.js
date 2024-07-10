@@ -7,4 +7,11 @@ export class LoginData {
             password: 'abc'
         };
     }
+
+    static get validCredentials() {
+        return {
+            username: 'username',
+            password: 'password'
+        };
+    }
 }

@@ -52,4 +52,10 @@ export class CommonMethods{
         return result;
     }
 
+    static verifySignedUser(username) {
+        CommonElements.signedUser.should('have.text', `Welcome ${username}`)
+    }
+
+    
+
 }

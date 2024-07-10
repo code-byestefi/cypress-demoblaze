@@ -3,10 +3,11 @@ import { CommonData } from "../pages/common/common.data"
 import { CommonMethods } from '../pages/common/common.methods';
 import { Logger } from "../util/logger"
 import { SignUpMethods } from "../pages/signup/signup.methods"
+import { LoginData } from "../pages/login/login.data";
 
 const user = CommonMethods.generateRandomString();
 const password = CommonMethods.generateRandomString();
-const existingUser = 'username';
+const existingUser = LoginData.validCredentials.username
 
 describe(CommonData.testSuites.register, () => {
 
